@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://unpkg.com/@webcomponents/webcomponentsjs@next/webcomponents-loader.js"></script>
+		<style id="demo-style">
+			code-flask {
+				max-width: 640px;
+				min-height: 450px;
+				margin: 0 auto;
+				background: #f5f5ff;
+				border-radius: 5px;
+				color: #222;
+				--codeflask-tag: blue;
+				--codeflask-property: red;
+			}
+			body { background: #fff; color: #444; text-align: center; }
+			a { color: #8500ff; }
+			a:hover { color: #6550ff; }
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a href="https://github.com/kazzkiq/CodeFlask">
+				CodeFlask</a> in a
+			<a href="https://github.com/myfreeweb/codeflask-element">
+				Custom Element</a>
+		</h1>
+
+		<script type="module">
+			import './dist/code-flask.module.js'
+		</script>
+
+		<code-flask id="cfdemo" language="markup">x</code-flask>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", _ => {
+				const cf = document.getElementById('cfdemo')
+				cf.addEventListener('value-changed', e =>
+					console.log('NEW VALUE: ', cf.value))
+				cf.value = document.getElementById('demo-style')
+					.outerHTML.replace(/(^|\n)\t\t/g, '$1') + '\n'
+				cf.value += document.body.innerHTML
+					.replace(/(^|\n)\t\t/g, '$1')
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+{
+    "name": "codeflask-element",
+    "version": "0.0.0",
+    "description": "Custom Elements wrapper for CodeFlask, a simple code editor",
+    "author": "Greg V",
+    "license": "MIT",
+    "scripts": {
+        "build": "rollup -c",
+        "prepublishOnly": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/myfreeweb/codeflask-element"
+    },
+    "keywords": [
+        "web-components",
+        "webcomponent",
+        "custom-element",
+        "codeflask",
+        "editor"
+    ],
+    "main": "dist/code-flask.global.js",
+    "module": "dist/code-flask.module.js",
+    "dependencies": {
+        "codeflask": "^1.0.5"
+    },
+    "devDependencies": {
+        "rollup": "^0.58.2",
+        "rollup-plugin-node-resolve": "^3.3.0"
+    }
+}
