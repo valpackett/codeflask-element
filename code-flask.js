@@ -6,7 +6,8 @@ export default class CodeFlaskElement extends HTMLElement {
 		this.attachShadow({ mode: 'open' })
 		this.shadowRoot.innerHTML += `<style> :host { display: block; position: relative;
 				overflow-x: auto; min-height: 100px; }
-			.codeflask .token.punctuation { color: var(--codeflask-punctuation, #4a4a4a) }
+			.codeflask .token.title { color: var(--codeflask-title, #000) }
+			.codeflask .token.punctuation { color: var(--codeflask-punctuation, #6a6a6a) }
 			.codeflask .token.keyword { color: var(--codeflask-keyword, #8500ff) }
 			.codeflask .token.operator { color: var(--codeflask-operator, #ff5598) }
 			.codeflask .token.string { color: var(--codeflask-string, #41ad8f) }
@@ -18,6 +19,9 @@ export default class CodeFlaskElement extends HTMLElement {
 			.codeflask .token.property { color: var(--codeflask-property, #8500ff) }
 			.codeflask .token.tag { color: var(--codeflask-tag, #8500ff) }
 			.codeflask .token.attr-value { color: var(--codeflask-attr-value, #8500ff) }
+			.codeflask .token.url { color: var(--codeflask-url, #4040ff) }
+			.codeflask .token.italic { font-style: italic }
+			.codeflask .token.bold { font-weight: bolder }
 		</style>`
 		this.editorElement = document.createElement('div')
 		this.editorElement.style.width = '100%'
