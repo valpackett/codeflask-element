@@ -30,6 +30,7 @@ export default class CodeFlaskElement extends HTMLElement {
 		this.shadowRoot.appendChild(this.editorElement)
 		this.flask = new CodeFlask(this.editorElement, {
 			language: this.getAttribute('language') || 'markup',
+			wordWrap: this.hasAttribute('word-wrap'),
 			lineNumbers: this.lineNumbers,
 			rtl: this.dir === 'rtl',
 			defaultTheme: false,
