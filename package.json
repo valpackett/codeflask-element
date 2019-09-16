@@ -1,6 +1,6 @@
 {
     "name": "codeflask-element",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "Custom Elements wrapper for CodeFlask, a simple code editor",
     "author": "Greg V <greg@unrelenting.technology>",
     "license": "MIT",
