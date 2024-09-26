@@ -25,7 +25,7 @@
         "codeflask": "^1.4.0"
     },
     "devDependencies": {
-        "rollup": "^1.19.0",
+        "rollup": "^2.79.2",
         "rollup-plugin-node-resolve": "^5.2.0"
     }
 }
